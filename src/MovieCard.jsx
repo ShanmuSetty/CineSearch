@@ -1,10 +1,10 @@
-
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './App.css';
+
 const MovieCard = ({ movie, size = 'normal' }) => {
   const imageSize = size === 'large' ? 'w500' : 'w300';
   const cardClass = size === 'large' ? 'movie-card large' : 'movie-card';
-  
+
   return (
     <div className={cardClass}>
       <Link to={`/movie/${movie.id}`}>
@@ -25,4 +25,5 @@ const MovieCard = ({ movie, size = 'normal' }) => {
     </div>
   );
 };
+
 export default MovieCard;

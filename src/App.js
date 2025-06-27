@@ -149,9 +149,8 @@ const App = () => {
           />
           <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
-      <FooterComponent />
       </div>
-      
+      <FooterComponent />
     </Router>
     
   );
