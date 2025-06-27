@@ -1,0 +1,340 @@
+/* MovieDetails.css */
+
+.movie-details {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 20px;
+  text-align: center;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.movie-details h3 {
+  text-align: center;
+  margin: 10px 20px 30px;
+  color: #b0b0b0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.backdrop-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 30px;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.backdrop-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba(15, 15, 35, 0.8) 100%);
+  pointer-events: none;
+}
+
+.details-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.details-content p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 12px;
+  border-left: 4px solid #4ecdc4;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.details-content p:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.details-content strong {
+  color: #4ecdc4;
+  font-weight: 600;
+}
+
+.details-content a {
+  color: #45b7d1;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.details-content a:hover {
+  color: #66d9ef;
+  text-decoration: underline;
+}
+
+.production-companies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  min-height: 80px;
+  transition: all 0.3s ease;
+}
+
+.company:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.company img {
+  max-width: 100%;
+  max-height: 60px;
+  object-fit: contain;
+  filter: brightness(0.9);
+}
+
+.no-logo {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+  font-weight: 500;
+}
+
+.trailer {
+  margin: 40px 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.trailer h2 {
+  color: #ff6b6b;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.trailer iframe {
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.cast-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+  margin: 30px 0;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+.cast-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cast-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  border-color: rgba(78, 205, 196, 0.5);
+}
+
+.cast-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cast-card p {
+  margin: 10px 0;
+  background: none;
+  padding: 0;
+  border: none;
+  font-size: 1rem;
+}
+
+.cast-card p:hover {
+  transform: none;
+}
+
+.cast-card strong {
+  color: white;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.review {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  border-left: 4px solid #ff6b6b;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.review:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.review p {
+  background: none;
+  padding: 0;
+  border: none;
+  margin: 15px 0;
+}
+
+.review p:hover {
+  transform: none;
+}
+
+.review strong {
+  color: #ff6b6b;
+  font-size: 1.2rem;
+}
+
+.details-content h2 {
+  color: #4ecdc4;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 40px 0 20px 0;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.details-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #4ecdc4, #45b7d1);
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .movie-details h1 {
+    font-size: 2.5rem;
+    margin: 15px;
+  }
+  
+  .backdrop-img {
+    height: 250px;
+  }
+  
+  .details-content {
+    padding: 0 15px 30px;
+  }
+  
+  .cast-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  
+  .production-companies {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .trailer {
+    padding: 20px;
+  }
+  
+  .trailer h2 {
+    font-size: 1.8rem;
+  }
+  
+  .details-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .movie-details h1 {
+    font-size: 2rem;
+  }
+  
+  .back-button {
+    margin: 15px;
+    padding: 10px 20px;
+  }
+  
+  .cast-list {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  }
+  
+  .cast-card img {
+    height: 160px;
+  }
+}
